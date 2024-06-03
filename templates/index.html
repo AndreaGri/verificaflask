@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Elimina Cliente</title>
-</head>
-<body>
-    <form action="/elimina_cliente" method="POST">
-        <p>Inserisci l'ID del cliente da eliminare:</p>
-        <p><input type="number" name="customer_id" /></p>
-        <p><input type="submit" value="Elimina" /></p>
-    </form>
-    <p>{{ msg }}</p>
-</body>
+    <head>
+        <title>Homepage</title>
+    </head>
+    <body>
+        {% for nazione in lista %}
+            <p><a href='/elencocitta/{{ nazione }}'>{{ nazione }}</a></p>
+        {% endfor %}
+        <p><a href="/elimina_cliente">Elimina cliente</a></p>
+        <p><a href="/aggiungi_cliente">Aggiungi cliente</a></p>
+    </body>
 </html>
